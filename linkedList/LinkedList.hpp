@@ -40,6 +40,18 @@ bool LinkedList<T>::search(T value) const
 	bool isFound = false;
 
 	//TODO
+	while (isFound == false)
+	{
+		if (temp == value)
+		{
+			isFound = true;
+			return true;
+		}
+		else
+			temp = getNext();
+	}
+
+	return false;
 }
 
 template <typename T>
